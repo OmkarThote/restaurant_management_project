@@ -16,6 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
+from django.conf.urls import handler404
 from . import views
 
 urlpatterns = [
@@ -30,3 +31,10 @@ urlpatterns = [
 urlpatterns = [
     path('', views.home, name='home'),
 ]
+
+
+urlpatterns = [
+    path('admin/' admin.site.urls),
+]
+
+handler404 = 'Restaurant_management.views.custom_404'
