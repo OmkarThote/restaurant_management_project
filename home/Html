@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>Gourmet Haven</title>
+<link rel="stylesheet" href="{ % static 'css/ style.css' %}">
+</head>
+<body>
+
+<header>
+<h1>Gourmet Haven</h1>
+<p>Where Taste Meets Tradition</p>
+</header>
+
+<main>
+<h2>Welcome!</h2>
+<p>At Gourmet Haven, we serve freshly prepared dishes using the finest ingredients.</p>
+<a href="/about" class="button">About Us </a>
+</main>
+
+<footer style="text-align:center; padding:15px; background-color:#eee;">
+<p>&copy; 2025 Gourmet Haven</p>
+</footer>
+
+</body>
+</html>
