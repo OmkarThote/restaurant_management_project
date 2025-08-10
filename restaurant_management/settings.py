@@ -129,3 +129,20 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
+# HTML
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Not Found</title>
+</head>
+<body style="font-family: Arial, sans-serif;
+background-color: #f8f9fa; text-align: center; padding-top: 100px">
+<h1 style="font-size: 60px; color: #ff6f61;">404</h1>
+<h2 style="color: 555;">0opps! Page not found.</h2>
+<p style="color: #555;">The page you are looking for doesn't exist or has been moved.</p>
+
+<a href="/" style="display: inline-block; margin-top: 15px; background-color: #ff6f61; color: text-decoration: none;">Go to Homepage</a>
+
+</body>
+</html>
