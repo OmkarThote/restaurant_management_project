@@ -13,3 +13,4 @@ return render(request, 'home.html',
 {
     'restaurant_name': restaurant.name if restaurant else 'No Name'
 })
+
