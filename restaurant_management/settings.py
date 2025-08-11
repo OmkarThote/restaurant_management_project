@@ -129,6 +129,7 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
+
 # HTML
 
 <!DOCTYPE html>
@@ -146,3 +147,7 @@ background-color: #f8f9fa; text-align: center; padding-top: 100px">
 
 </body>
 </html>
+
+
+
+RESTAURANT_PHONE_NUMBER = "+1-555-123-4567"
