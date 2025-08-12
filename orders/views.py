@@ -10,3 +10,14 @@ def home(request):
     settings.RESTAURANT_PHONE_NUMBER
     }
 return render(request, 'home.html', context)
+
+def menu_items_view(ewquest):
+    menu_items = [
+        {"name": "Pizza", "Price": 8.99},
+        {"name": "Burger", "Price": 5.49},
+        {"name": "Pasta", "Price": 7.25},
+        {"name": "Salad", "Price": 4.75},
+    ]
+    return render(request, "menu_items.html",
+    {"menu_items": menu_items})
+    
