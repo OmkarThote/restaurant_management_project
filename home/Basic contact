@@ -1,0 +1,45 @@
+form flask import Flask, render_template_string
+
+app = Flask(__name__)
+
+HTML_FORM = """
+<!DOCTYPE html>
+<head>
+    <title>Contact Form</title>
+    <script>
+        function validateForm() {
+            let name = document.forms["contactForm"]["name"].value;
+            let email = document.forms["contactForm"]["email"].value;
+
+                if (name.trim() === "" || email.trim() === "")
+                {
+                    alert("Name and Email fields are required!");
+                    return false;  // prevent form submissison
+
+                }
+                return true;
+
+        }
+    </script>
+</head>
+<body>
+    <h2>Contact US</h2>
+    <form name="contactForm" onsubmit="return validateForm()">
+    <label>Name:</label><br>
+    <input type="text" name=="name"><br><br>
+
+    <label>Email:</label><br>
+    <input type="email" name="email"><br><br>
+
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>
+"""
+
+@app.route("/")
+def contact():
+    return render_template_string(HTML_FORM)
+
+if __name__ == "__main__"
+    app.run(debug=True)
