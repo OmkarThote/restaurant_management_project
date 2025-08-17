@@ -22,3 +22,6 @@ def get_menu(request):
         }
     ]
     return Response(menu)
+
+
+    
