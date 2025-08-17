@@ -18,6 +18,8 @@ from django.contrib import admin
 from django.urls import path,include
 from django.conf.urls import handler404
 from . import views
+from .views import get_menu
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -38,3 +40,8 @@ urlpatterns = [
 ]
 
 handler404 = 'Restaurant_management.views.custom_404'
+
+
+urlpatterns = [
+    path('menu/', get_menu, namename='menu'),
+]
