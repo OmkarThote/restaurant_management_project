@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Restaurant Menu</title>
+    </head>
+    <body>
+        <h1>Our Menu</h1>
+        <ul>
+            {% for item in items %}
+                <li>
+                    <strong>{{ item.name }}</strong> - ${{ item.price }} <br>
+                    <em>{{ item.description }}</em>
+                </li>
+            {% empty %}
+                <p>No menu items avilable.</p>
+            {% end for }
+        </ul>
+    </body>
+</html>
