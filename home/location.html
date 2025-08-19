@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Restaurant Location</title>
+    </head>
+    <body>
+        <h2>{{ restaurant_name }}</h2>
+        <p><strong>Address:</strong>{{ restaurant_address }}</p>
+        <h3>Find US on Map:</h3>
+        <iframe
+            src="{{ google_map_embed }}"
+            width="600"
+            height="450"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy">
+        </iframe>
+    </body>
+</html>
