@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Restaurant Homepage</title>
+    </head>
+    <body>
+        <h1> Welcome to {{ restaurant.name }}</h1>
+
+        <!-- Restaurant Address Section -->
+        <div style="margin-bottom: 20px;">
+            <h3> Find Us</h3>
+            <p>{{ restaurant address }}</p>
+            {% if restaurant.phone %}
+                <p> {{ restaurant.phone }}</p>
+                {% endif %}
+                {% if restaurant.email %}
+                <p> {{ restaurant.email }}</p>
+                {% endif %}
+        </div>
+
+        <!-- Menu Section -->
+        <h2>Our Menu</h2>
+        <ul>
+            {% for item in items %}
+            <li>
+                <strong>{{ item.name }}</strong> - {{ item.price }} <br>
+                {{ item.description }}
+                {% if item.image %}
+                <br>
+                <img src="{{ item.image.url }}" width="120">
+                {% endif %}
+            </li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>
