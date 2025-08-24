@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Menu Search</title>
+    </head>
+    <body>
+        <h1>Search Menu Items</h1>
+
+        <form method="get">
+            <input type="text" name="q" placeholder="Search by name..." value="{{ query }}">
+            <button type="submmit">Search</button>
+        </form>
+
+        <h2>Results:</h2>
+        <ul>
+            {% for item in items %}
+            <li>
+                <strong>{{ item.name }}</strong> -${{ item.price }}<br>
+                <em>{{ item.description }}</em>
+            </li>
+            {% empty %}
+                <li>No items found.</li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>
