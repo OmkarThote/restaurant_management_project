@@ -5,6 +5,13 @@
     </head>
     <body>
         <h1>Welcome to {{ restaurant.name }}</h1>
-        <p>Phone Number: {{ restaurant.phone_number }}</p>
+        <p>Phone Number {{ restaurant.phone_number }}</p>
+
+        {% if restaurant.logo %}
+        <img src="{{ restaurant.logo.url }}"
+        alt="Restaurant Logo" width"200">
+        {% else %}
+        <p>No logo available</p>
+        {% endif %}
     </body>
 </html>
