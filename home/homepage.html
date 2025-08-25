@@ -4,14 +4,12 @@
         <title>Restaurant Homepage</title>
     </head>
     <body>
-        <h1>Welcome to {{ restaurant.name }}</h1>
-        <p>Phone Number {{ restaurant.phone_number }}</p>
+        <h1>Welcome to OurRestaurant</h1>
+        <p> Cart Items: {{ total_items }}</p>
 
-        {% if restaurant.logo %}
-        <img src="{{ restaurant.logo.url }}"
-        alt="Restaurant Logo" width"200">
-        {% else %}
-        <p>No logo available</p>
-        {% endif %}
+        <a href="/add-to-cart/1/">Add Item 1</a><br>
+        <a href="/add-to-cart/2/">Add Item 2</a><br>
+        <a href="/add-to-cart/3/">Add Item 3</a>
+
     </body>
 </html>
