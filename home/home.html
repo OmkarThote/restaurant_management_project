@@ -1,17 +1,11 @@
+<!-- home.html -->
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Restaurant Address</title>
+        <title>Homepage</title>
     </head>
     <body>
-        <h1>Welcome to {{ restaurant.name }}</h1>
-        <p><strong>Address:</strong>{{ restaurant.address }}</p>
-
-        <h2>Opening Hours</h2>
-        <ul>
-            {% for day, hours in restaurant.opening_hours.items %}
-            <li><strong>{{ day }}:</strong>
-            {{ hours }}</li>
-            {% endfor %}
+        <h2>Welcome to My Homepage</h2>
+        <p>Current Date and Time: {{ current_datetime| date:"d-m-y H:i::s "}}</p>
     </body>
 </html>
