@@ -1,11 +1,30 @@
-<!-- home.html -->
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Homepage</title>
+        <title>Restaurant Homepage</title>
+        <style>
+            body {
+            font-family: Arial, sans-serif;
+            background-color: #fafafa;
+            text-align: center;
+            padding: 50px;
+            }
+            .welcome-box {
+            background: #ffefd5;
+            padding: 20px;
+            border-radius: 12px;
+            display: inline-block;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            }
+            hr {
+            color: #d35400;
+            }
+        </style>
     </head>
     <body>
-        <h2>Welcome to My Homepage</h2>
-        <p>Current Date and Time: {{ current_datetime| date:"d-m-y H:i::s "}}</p>
+        <div class="welcome-box">
+            <h2>{{ welcome_message }}</h2>
+            <p>We are delighted to serve you. Explore our delicious menu today!</p>
+        </div>
     </body>
 </html>
