@@ -3,28 +3,28 @@
     <head>
         <title>Restaurant Homepage</title>
         <style>
-            body {
-            font-family: Arial, sans-serif;
-            background-color: #fafafa;
-            text-align: center;
-            padding: 50px;
-            }
-            .welcome-box {
-            background: #ffefd5;
-            padding: 20px;
-            border-radius: 12px;
-            display: inline-block;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            }
-            hr {
-            color: #d35400;
-            }
+            .phone-box {
+                margin-top: 20px;
+                padding: 15px;
+                background: #f1f1f1;
+                border-radius: 8px;
+                font-size: 18px;
+                text-align: center;
+                font-weight: bold;
+                color: #2c3e50;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                }
+            .phone-box a {
+                text-decoration: none;
+                color: #d35400;
+                }
         </style>
     </head>
     <body>
-        <div class="welcome-box">
-            <h2>{{ welcome_message }}</h2>
-            <p>We are delighted to serve you. Explore our delicious menu today!</p>
+        <h1>Welcome to our Restaurant</h1>
+        <div class="phone-box">
+                Call Us: <a href="tel: {{ phone_number }}">{{ phone_number }}</a>
         </div>
     </body>
 </html>
+
