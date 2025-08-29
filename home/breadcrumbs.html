@@ -1,0 +1,11 @@
+<nav aria-label="breadcrumb">
+    <ol>
+        <li><a href="/">Home</a></li>
+        {% if forloop.last %}
+            <li>{{ crumb.name }}</li>
+        {% else %}
+            <li><a href="{{ crumb.url }}">{{ crumb.name }}</a></li>
+            {% endif %}
+        {% endfor %}
+    </ol>
+</nav>
