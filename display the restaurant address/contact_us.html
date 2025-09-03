@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact Us</title>
+    </head>
+    <body>
+        <h1>Contact Us</h1>
+
+        {% if restaurant %}
+            <p><strong>Address:</strong>
+            {{ restaurant.address }}</p>
+        {% else %}
+            <p>Address not available.</p>
+        {% endif %}
+    </body>
+</html>
