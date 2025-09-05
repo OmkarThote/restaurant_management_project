@@ -1,0 +1,7 @@
+<h1>Menu Items</h1>
+{% for item in menu_items %}
+    <div>
+        <h2>{{ item.name }} <span class="status">{{ item.is_available | coming_soon }}</span></h2>
+        <p>{{ item.description }}</p>
+    </div>
+{% endfor %}
