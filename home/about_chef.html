@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>About the Chef</title>
+    </head>
+    <body>
+        {% if chef %}
+            <h1>{{ chef.name }}</h1>
+            <img src="{{ chef.image.url }}" alt="Chef {{ chef.name }}">
+            <p>{{ chef.bio }}</p>
+        {% else %}
+            <p>No chef information available.</p>
+        {% endif %}
+    </body>
+</html>
