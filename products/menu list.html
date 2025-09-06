@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en"
+    <head>
+         <meta charset="UTF-8">
+         <title>Menu</title>
+    </head>
+    <body>
+    <h1>Our Menu</h1>
+
+    {% for item in page_obj %}
+    <div class="menu-items">
+        <h3>{{ item.name }}</h3>
+        <p>{{ item.description }}</p>
+        <p>Price: ${{ item.price }}</p>
+    </div>
+    {% empty %}
+        <p>No menu items available</p>
+    {% endfor %}
+
+    <div class="pagination">
+        <span class="step-links">
+            {% if page_obj.has_previous %}
+                <a href="?page=1">&laquo;
+                    first</a>
+            {% endif %}
+
+            <span class="current-page">
+                Page {{ page_obj.number }}
+                of {{ page_obj.paginator.num_pages }}.
+            </span>
+
+            {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}">next</a>
+            <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+
+            {% endif %}
+        </span>
+    </div>
+
+    </body>
+</html>
