@@ -1,0 +1,28 @@
+from bs4 import BeautifulSoup
+
+# Sample HTML content
+html_content = """
+<html>
+    <head>
+        <title>Accessibility Example</title>
+    </head>
+    <body>
+        <h1>Welcome to My Website</h1>
+        <img src="logo.png">
+        <img src="banner.jpg" alt="Website banner with text">
+        <img src="profile.png">
+    </body>
+</html>
+"""
+
+# Parse the HTML
+    soup = BeautifulSoup(html_content, "html.parser")
+
+# Add descriptive alt text to images without alt attribute
+    for img in soup.find_all("img"):
+        # You can customize the alt text based on filename or context
+
+        img['alt'] = f"Image of {img['src'].split('.')[0]}"
+
+# Print updated HTML
+    print(soup.prettify())
