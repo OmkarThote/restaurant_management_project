@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Abous Us</title>
+    </head>
+    <body>
+        <h1>About Our Restaurant</h1>
+        {% if restaurant_info %}
+            <p>{{ restaurant_info.description }}</p>
+        {% else %}
+            <p>No description available yet.</p>
+        {% endif %}
+    </body>
+</html>
